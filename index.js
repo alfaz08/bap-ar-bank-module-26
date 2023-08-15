@@ -11,12 +11,11 @@
   //step-4:verify email
 
   if(emailValue==='alfaz.cse@gmail.com' && passwordValue==='ami0174'){
-     console.log('Valid User')
+    //step-5 take to the next page
+    location.href ='bank.html'
   }
   else{
-    console.log('Invalid User')
-  }
-
-  
-   
+    alert('Invalid User')
+  } 
 })
+

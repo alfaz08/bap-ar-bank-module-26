@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Inside</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body>
+  <header>
+    <h1 class="text-5xl mt-6 text-center">Let's Get Some <span class="text-red-600 font-semibold">Money</span></h1>
+  </header>
+
+  <main>
+    <section class="mt-8 ">
+      <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
+         <div class="bg-green-600 p-8 rounded-xl">
+          <h4 class="text-2xl">Deposit</h4>
+          <h2  class="text-5xl">$<span id="deposit-total">00</span></h2>
+         </div>
+         <div class="bg-yellow-600 p-8 rounded-xl">
+          <h4 class="text-2xl">Withdraw</h4>
+          <h2 class="text-5xl">$<span id="withdraw-total">00</span></h2>
+         </div>
+         <div class="bg-violet-600 p-8 rounded-xl">
+          <h4 class="text-2xl">Balance</h4>
+          <h2 class="text-5xl">$<span id="balance-total">00</span></h2>
+         </div>
+      </div>
+    </section>
+    <section class="mt-8 ">
+      <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto ">
+        <div class="bg-rose-400 p-8 rounded-xl">
+          <h4 class="text-2xl mb-4 ">Please Deposit</h4>
+          <input id="depositInput" class="w-9/12 block mb-2 px-3" type="text" name="" id="" placeholder="$ Amount you want to deposit">
+          <button id="deposit" class="bg-green-600 px-8 py-2 font-medium rounded-lg hover:bg-sky-700">Deposit</button>
+         </div>
+         <div class="bg-fuchsia-400 p-8 rounded-xl">
+          <h4  class="text-2xl mb-4">Please Withdraw</h4>
+          <input id="withdraw-input" class="w-9/12 block mb-2 px-3" type="text" name="" id="" placeholder="$ Amount you want to Withdraw">
+        <button id="btn-withdraw" class="bg-green-600 px-8 py-2 font-medium rounded-lg hover:bg-sky-700">Withdraw</button>
+         </div>
+      </div>
+    </section>
+
+  </main>  
+
+
+  <script src="deposit.js"></script>
+  <script src="withdraw.js"></script>
+</body>
+</html>
