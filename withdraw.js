@@ -23,29 +23,38 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
   const withdrawField = document.getElementById('withdraw-input');
   const newWithdrawAmountString= withdrawField.value;
   const newWithdrawAmount = parseInt(newWithdrawAmountString)
+  withdrawField.value =''
+   if(isNaN(newWithdrawAmount)){
+    alert('please provide a valid number')
+    return;
+   }
 
   //step-3 
 
   const withdrawTotalElement  = document.getElementById('withdraw-total');
   const previouswithdrawTotalString = withdrawTotalElement.innerText;
   const previouswithdrawTotal = parseInt(previouswithdrawTotalString)
-
-  //step-4
-  const currentWithdrawElement = newWithdrawAmount + previouswithdrawTotal;
-
-  //step-5
-  withdrawTotalElement.innerText = currentWithdrawElement;
+   
+  
 
   //step-6 get the previous balance total
   const balance = document.getElementById('balance-total');
   const previousBalanceTotal = balance.innerText;
   const previousTotalElement = parseInt(previousBalanceTotal);
 
-  //step-7 new balance total
-  const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
-  balance.innerText = newBalanceTotal;
+  //besi amount dile taka nai bolbe
+  if(newWithdrawAmount>previousBalanceTotal){
+    alert('Bap ar bank ato taka nai');
+    return;
+  }
+//step-4
+const currentWithdrawElement = newWithdrawAmount + previouswithdrawTotal;
 
-
+//step-5
+withdrawTotalElement.innerText = currentWithdrawElement;
+ //step-7 new balance total
+ const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+ balance.innerText = newBalanceTotal;
 
     //step-7: clear the deposit field
     withdrawField.value =''
